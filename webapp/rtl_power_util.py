@@ -21,9 +21,9 @@ class Wideband:
 
 		self.opts = rtl_power_options
 
-		self.freq_options = "{}M:{}M:{}".format(rtl_power_options['freqStart'], rtl_power_options['freqEnd'], rtl_power_options['fftBin'])
+		self.freq_options = "{}:{}".format(rtl_power_options['freqStart'], rtl_power_options['freqEnd'])
 
-		self.power_args = ["rtl_power", "-f", self.freq_options, "-g", self.opts['gain'], "-i", "2", "-c", "0.20"]
+		self.power_args = ["hackrf_sweep", "-f", self.freq_options, "-l", self.opts['gain'], "-w", rtl_power_options['fftBin'] ]
 
 		a = []
 
