@@ -480,6 +480,6 @@ setInterval(() => {
     if (ongoingScan == true && newData != false) {
         drawRow(newData);
     }
-}, 2000);
+}, 750);
 
 // updateCanvasTransform();
